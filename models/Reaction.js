@@ -16,7 +16,7 @@ const reactionSchema = new Schema (
             required: true
         },
         createdAt: {
-            type: Data,
+            type: Date,
             default: Date.now()
         }
     },

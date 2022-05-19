@@ -24,10 +24,7 @@ module.exports = {
     createUser(req, res) {
         User.create(req.body)
             .then((user) => res.json(user))
-            .catch((err) => {
-                console.log(err);
-                return res.status(500).json(err);
-            });
+            .catch((err) => res.status(500).json(err));
     },
     // update a user 
     updateUser(req, res) {
@@ -56,3 +53,8 @@ module.exports = {
                 .catch((err) => res.status(500).json(err));
     }
 }
+// TODO: /api/users/:userId/friends/:friendId
+
+// POST to add a new friend to a user's friend list
+
+// DELETE to remove a friend from a user's friend list
